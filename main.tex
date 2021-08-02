@@ -1,0 +1,62 @@
+\documentclass[table,12pt]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{geometry}
+\usepackage{tikz,lipsum,lmodern}
+\usetikzlibrary{calc}
+\usepackage[most]{tcolorbox}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tikzpagenodes}
+\usepackage{imakeidx}
+\usepackage[style=authoryear,bibstyle=authoryear]{biblatex}
+\usepackage{enumitem}
+\setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
+\usepackage{makeidx}
+\makeindex
+\usepackage[nottoc,numbib]{tocbibind}
+
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+
+\addbibresource{ref.bib}
+
+\makeindex
+
+\input{set}
+\input{cmd}
+\input{def}
+\input{col}
+\input{sty}
+
+\title{\Huge{Handbook of Software Engineering Methods}}
+\author{Lara Letaw}
+\date{\today}
+ 
+\begin{document}
+\nomargins
+\begin{tikzpicture}[overlay,remember picture] 
+\node[anchor=south] at ([yshift=-1.05in,xshift=0in]current page text area.south){\includegraphics[width=8.5in]{cover17}}; 
+\end{tikzpicture}
+
+%\maketitle
+
+\tableofcontents
+
+\input{beg}
+\input{spm}
+\input{pjm}
+\input{req}
+\input{uml}
+\input{msa}
+\input{uip}
+\input{csh}
+\input{csr}
+\input{end}
+%\input{oop}
+\input{glo}
+\input{ref}
+\input{dex}
+
+\end{document}

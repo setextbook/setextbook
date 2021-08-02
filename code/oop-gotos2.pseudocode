@@ -1,0 +1,35 @@
+REM Grocery Store Simulator
+
+SET aisle1_occupied = true
+SET aisle2_occupied = true
+SET aisle3_occupied = false
+
+SET got_apple = false
+SET got_bread = false
+SET got_cheese = false
+
+:aisle1
+if (aisle1_occupied) GOTO aisle2
+SET got_apple = true
+GOTO rotate_shoppers
+
+:aisle2
+if (aisle2_occupied) GOTO aisle3
+SET got_bread = true
+GOTO rotate_shoppers
+
+:aisle3
+if (aisle3_occupied) GOTO aisle1
+SET got_cheese = true
+
+:rotate_shoppers
+SET temp = aisle1_occupied
+SET temp2 = aisle2_occupied
+SET aisle1_occupied = aisle3_occupied
+SET aisle2_occupied = temp
+SET aisle3_occupied = temp2
+if (got_apple==false) GOTO aisle1
+if (got_bread==false) GOTO aisle2
+if (got_cheese==false) GOTO aisle3
+
+EXIT

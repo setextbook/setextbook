@@ -1,0 +1,104 @@
+\nomargins
+\chapter{Appendix: Object-Oriented Programming (OOP)}
+
+This chapter covers some basics of OOP in case you're not strongly familiar with it yet.
+
+\section{Programming Paradigms}
+
+Programming language capabilities can be classified in many ways (Ex: imperative, declarative, functional, pass-by-value, pass-by-reference, structured, non-structured, etc.). These classifications are called paradigms. Paradigms can be hierarchical (Ex: OO is a type of structured programming). One programming language can support multiple paradigms (Ex: Python supports functional, OO, and procedural programming, among other paradigms).
+
+\section{Non-Structured Programming}
+
+The non-structured programming paradigm allows unstructured control flow: jumping to any line in a program. If you have tried writing in assembly language or have heard people criticize goto or ``spaghetti code'', you might already be familiar with non-structured programming. Here's an example of a non-structured MS DOS batch file:
+
+\lstinputlisting[language=command.com]{code/oop-gotos1.bat}
+
+\replaceme
+
+This program isn't too bad. It executes line-by-line and, when it hits a goto, jumps to the corresponding label. If you have ever made an online survey and used skip logic, it might have felt a little like this batch file.
+
+Here's another example---written in pseudocode---that gives a taste of how non-structured programming can get messy:
+
+\lstinputlisting[language=command.com]{code/oop-gotos2.pseudocode}
+
+Now imagine control flow like this in a program that's much more complex and thousands of lines long.
+
+Because of the mess unrestricted gotos can make, some languages do not support the non-structured paradigm (e.g., Python).
+
+\section{Structured Programming}
+
+Structured programming is another programming paradigm. It was created to improve code quality by replacing unrestricted jumps (allowed by goto statements) with if/then/else and do/while/until constructs.
+
+However, even with the structured programming paradigm, code quality can still be poor.
+
+Example: Often, programs written in C, Python, JavaScript, PHP, and Python are structured as sets of functions. Functions might all be in one file or spread across multiple files. The functions in each file might have a common purpose, or might be organized only loosely.
+
+Here's example code from a developer who put all their PHP functions into one file called functions.php:
+
+\lstinputlisting[language=PHP]{code/oop-structured.php}
+
+\replaceme
+
+Looking at that code, you might immediately see advantages and disadvantages of this approach. Here are a few:
+
+\begin{itemize}
+\item \textbf{Pro}: Adding new functions is easy; Just put the new one at the bottom or next to some existing functions is seems similar to.
+\item \textbf{Con}: Modern systems perform more than one function. The code above has one hasImg function for checking if a specific image exists in a directory. What if the developer also wants a function called hasImg that recursively checks there's at least one image in a directory structure? Or if they want hasImg to check that a user's account has an image? They could try to combine all this functionality into one function. Or, they could try to give each function a more detailed name and signature to distinguish it from the others. Either way, the code can become more complex and less clear.
+\item \textbf{Con}: Systems evolve, their functions change. What happens when the developer decides to stop putting images in a directory structure and instead puts them in a database as data? They'll have to carefully look through each function and rewrite the ones that assumed images were in directories. Some of those functions might be poorly documented or written by another person, making the task even harder.
+\end{itemize}
+
+Keep reading to learn object-oriented programming concepts that can help address the cons above.
+
+\section{Object-Oriented Programming (OOP)}
+
+OOP is a type of structured programming. The OOP paradigm was created to improve code quality by supporting these four major concepts:
+
+\begin{itemize}
+\item \textbf{Abstraction}: Hiding implementation details to focus on a higher level of generality. Ex: There are different ways, using different data structures, to implement the stack abstract data type. But when we're talking about a stack, we all know what it means and usually don't care about the implementation (so long as it performs well).
+\item \textbf{Encapsulation}: Creating groups of data and functions, and controlling how the contents of those groups can be accessed. Ex: A function with local variables that can only be modified within the function; the variables are encapsulated within the function.
+\item \textbf{Inheritance}: Allowing one encapsulation to use the implementation details of another encapsulation. Changing the parent can affect the child, but changing the child cannot affect the parent. Ex: In a GUI toolkit you might have code for a scrolling window that inherits implementation details (like variables for corner coordinates) from a code for a generic window. Note that the child (scrolling window) has more functionality---it has everything a generic window has plus it can scroll.  
+\item \textbf{Polymorphism}: Taking on many forms. Ex: Two functions with the same name but different parameters and implementations, like makeColor(int R, int G, int B) and makeColor(int R, int G, int B, float A). The fourth parameter can be added to control the color's alpha channel (opacity).
+\end{itemize}
+
+Programming languages that support OOP try to make it easier to use these concepts in software. However, OOP does not magically solve code quality problems: It's still up to the programmer to use good coding practices and to design their software intelligently... and that is easier said than done.
+
+\subsection{More OOP Terms}
+
+Below are some OOP terms and concepts that might show up in explorations or readings this term. Use this as a reference as needed.
+
+\begin{itemize}
+\item{\textbf{Class}: A template for creating objects. Python example:
+
+\lstinputlisting[language=Python]{code/oop-class.py}
+
+\replaceme
+} 
+\item{\textbf{Method}: Another word for a function.
+}
+\item{\textbf{Object}: An instance of a class. Python example:
+
+\lstinputlisting[language=Python]{code/oop-object.py}
+
+\replaceme
+}
+\item{\textbf{Instantiation}: Creating an instance of an class.}
+\item{\textbf{Subclass}: A class that inherits from another class. Also called a child class, derived class, or extended class. Java example:
+
+\lstinputlisting[language=Java]{code/oop-subclass.java}
+
+\replaceme
+}
+\item{\textbf{Superclass}: A class that can be inherited from. Also called a parent class or a base class.}
+\item{\textbf{Abstract class}: A class that cannot be instantiated but can be subclassed. C\# example (where Square must provide an implementation of GetArea()):
+
+\lstinputlisting[language={[Sharp]C}]{code/oop-abstractclass.cs}
+
+\replaceme
+}
+\end{itemize}
+
+\section*{Additional Resources}
+
+``Clean Architecture'' by Robert C. Martin (2018) (see Course Resources)
+
+Go To Statement Considered Harmful (Links to an external site.) (Dijkstra 1968)
