@@ -2,11 +2,11 @@
 \chapter{Cognitive Style Heuristics}
 \begin{tikzpicture}[overlay,remember picture] 
 \node[anchor=south] at ([yshift=5in,xshift=2.1in]current page text area.south){\includegraphics[width=11.5in]{csh02-sm}}; 
-\end{tikzpicture}\marginpar{\textbf{Cognitive Style Heuristics (CSH)\index{cognitive style heuristics}}: Eight principles of interaction design\index{interaction design} for finding and fixing usability\index{usability} bugs in software. They are based around different cognitive styles\index{cognitive styles} different people use when they problem-solve in software.\margindivider}\marginpar{\textbf{interaction design}\index{interaction design}: An approach to technology design that involves helping users understand what's happening with the technology, what just happened, and what they can do \parencite{norman13}.}The \textbf{Cognitive Style Heuristics (CSH)}\index{cognitive style heuristics} are eight principles of \textbf{interaction design}\index{interaction design} used to improve software usability\index{usability}. They are framed around how different people use software in different ways. The CSH\index{cognitive style heuristics} were created by a research team headed by Margaret Burnett, one of the world's leading experts in usability research and \textbf{inclusive software design}.
+\end{tikzpicture}\marginpar{\cognitiveStyleHeuristicsDef\margindivider}\marginpar{\interactionDesignDef}The \textbf{Cognitive Style Heuristics (CSH)}\index{cognitive style heuristics} are eight principles of \textbf{interaction design}\index{interaction design} used to improve software usability\index{usability}. They are framed around how different people use software in different ways. The CSH\index{cognitive style heuristics} were created by a research team headed by Margaret Burnett, one of the world's leading experts in usability research and \textbf{inclusive software design}.
 
 The CSH\index{cognitive style heuristics} were created with new users in mind: People who have never seen, interacted with, or received previous direction on the software. They can also improve usability for more seasoned users who have figured out how to use the software to complete their tasks but may still be unhappy with the software.
 
-\section{Cognitive Style Facets}\marginpar{\textbf{inclusive software design}: A type of software user interface design with the goal of increasing usability for traditionally under-served user populations while also increasing usability for mainstream users.\margindivider}\marginpar{\textbf{cognitive style facets (CSFs)\index{cognitive style facets}}: Five aspects of users that affect how they solve problems in software: Motivations\index{motivations (cognitive style facet)}, information processing style\index{information processing style (cognitive style facet)}, computer self-efficacy\index{computer self-efficacy (cognitive style facet)}, attitude toward risk\index{attitude toward risk (cognitive style facet)}, learning style\index{learning style (cognitive style facet)}\margindivider}\marginpar{\textbf{motivation CSF\index{motivations (cognitive style facet)}}: Why someone is using the software (task completion vs. interest)\margindivider}\marginpar{\textbf{information processing style CSF\index{information processing style (cognitive style facet)}}: How a person looks through or absorbs information in software (comprehensively vs. selectively)\margindivider}\marginpar{\textbf{motivation CSF}: Why someone is using the software (task completion vs. interest)\margindivider}\marginpar{\textbf{computer self-efficacy CSF\index{computer self-efficacy (cognitive style facet)}}: A person's confidence in their ability to use computers or software (low vs. high)}
+\section{Cognitive Style Facets}\marginpar{\inclusiveSoftwareDesignDef\margindivider}\marginpar{\cognitiveStyleFacetsDef\margindivider}\marginpar{\motivationCsfDef\margindivider}\marginpar{\informationProcessingStyleCsfDef\margindivider}\marginpar{\computerSelfEfficacyCsfDef}
 
 At the core of the Cognitive Style Heuristics\index{cognitive style heuristics} are the \textbf{cognitive style facets}\index{cognitive style facets}, five aspects of human cognition that affect how users problem-solve in software:
 
@@ -19,7 +19,7 @@ At the core of the Cognitive Style Heuristics\index{cognitive style heuristics} 
 \item{\textbf{Learning style} (tinkering vs. by process). When someone is tinkering, they might click a button just because it's clickable then learn from what happens. When someone is learning by process, they might seek a logical first step, and want to proceed smoothly from start to finish.}
 \end{enumerate}
 
-As you probably noticed, each of the cognitive style facets has two polar \textbf{cognitive style facet values} (or \textbf{cognitive styles}\index{cognitive styles}). Each pair of facet values creates a spectrum. When each of us uses software, the way we feel and behave corresponds to somewhere on each of those spectra. Our individual facet values may be similar each time we use software, but they can also vary by context and change over time. For example, many people feel cognitively impatient when reading paragraphs of text (``text walls'') on websites and might process them more selectively, whereas they might want to catch every word of a new novel by their favorite author (comprehensive processing). \marginpar{\textbf{attitude toward risk CSF}\index{attitude toward risk (cognitive style facet)}: How willing a person is to take chances in software (risk-tolerant vs. risk-averse)\margindivider}\marginpar{\textbf{learning style CSF}: How a person prefers to move through software (tinkering vs. by process)\margindivider}\marginpar{\textbf{cognitive style facet value (A.K.A., cognitive style)}: A position on the spectrum of a cognitive style facet\margindivider}\marginpar{\textbf{persona}\index{persona}: A fictional character that represents a subset of users in a target audience. Personas are used in marketing and UI design to help with focusing on particular groups of users and customers \parencite{pruitt10,martin12}.\margindivider}\marginpar{\textbf{cognitive style personas}: Three specialized personas (Abi, Pat, and Tim) used for making software UI designs more usable to people with different cognitive styles.}
+As you probably noticed, each of the cognitive style facets has two polar \textbf{cognitive style facet values} (or \textbf{cognitive styles}\index{cognitive styles}). Each pair of facet values creates a spectrum. When each of us uses software, the way we feel and behave corresponds to somewhere on each of those spectra. Our individual facet values may be similar each time we use software, but they can also vary by context and change over time. For example, many people feel cognitively impatient when reading paragraphs of text (``text walls'') on websites and might process them more selectively, whereas they might want to catch every word of a new novel by their favorite author (comprehensive processing). \marginpar{\attitudeTowardRiskCsfDef\margindivider}\marginpar{\learningStyleCsfDef\margindivider}\marginpar{\cognitiveStyleFacetValueDef\margindivider}\marginpar{\personaDef\margindivider}\marginpar{\cognitiveStylePersonasDef}
 
 \section{Cognitive Style Personas}
 
@@ -77,18 +77,19 @@ The idea of the cognitive style personas is that creating software that works we
 
 \section{The Heuristics}
 
-Note: The designs shown below were modelled after examples found in published software.
+Adapted from \parencite{burnett2021heuristics}.\\
+
+\noindent\textbf{Note}: The designs shown below were modelled after examples found in published software.
 
 \subsection{Heuristic \#1 (of 8): Explain the \textit{benefits} of using new and existing features}
 
 \begin{itemize}
-\item Abi and Pat are motivated to use tech only as needed for their task. They rarely have spare time and prefer familiar features so they can keep focused on the task. Unless they see how features will help with their task, they may not be interested in using them.
-\item Abi is risk-averse with tech. For example, they may avoid using features that have an unknown time cost and other unknown risks.
-\item Pat is also risk-averse with tech, but might try out the features to determine whether they are relevant to accomplishing their task.
-\item Tim likes learning what features can help them accomplish and is motivated to investigate new, cutting-edge features. Tim is also risk-tolerant so may use features without knowing their cost or even what they do.
+\item \textbf{Abi and Pat are task-motivated} so might lose interest if they don't see how a feature relates to their task.
+\item \textbf{Abi is risk-averse} so might avoid features with too many unknowns.
+\item \textbf{Tim is risk-tolerant} and \textbf{motivated by tech interest} so might take a chance on features then be disappointed at how mundane they are.
 \end{itemize}
 
-\noindent To support their \textbf{motivations} and \textbf{attitudes toward risk}, allow Abi and Pat to quickly assess the benefits of features so they can choose whether to use them. Allow Tim to quickly assess which features are new and unique and what the features do so they can explore it if desired.
+\noindent To support users' motivations and attitudes toward risk, \textbf{provide Abi and Pat ways to decide whether a feature relates to their task and provide Tim ways to decide whether a feature is new and unique}.
 
 \spacer
 \noindent\textbf{Example 1: Each featured extension has a brief description that says what the extension does and why somebody would use it.}
@@ -256,13 +257,13 @@ To support their \textbf{attitudes toward risk}, provide undo/redo and backtrack
 \yesmargins
 \section{Background}
 
-\marginpar{\textbf{heuristic evaluation}: A usability inspection method where evaluators independently check that a design reflects a set of heuristics, then compare results \parencite{nielsen90}.\margindivider}
+\marginpar{\heuristicEvaluationDef\margindivider}
 
 \marginpar{The cognitive style personas are simplified versions of the GenderMag personas. You can find the the GenderMag personas, and a full description of their research origins, at \href{http://gendermag.org/}{GenderMag.org}\margindivider}
 
-\marginpar{\textbf{GenderMag Method:} A method for finding and fixing gender-inclusivity bugs in software that uses a specialized cognitive walkthrough and the customizable Abi, Pat, and Tim personas \parencite{burnett16}\margindivider}
+\marginpar{\genderMagMethodDef\margindivider}
 
-\marginpar{\textbf{cognitive walkthrough\index{cognitive walkthrough}}: A usability inspection method that involves stepping through a user interface as a user, stopping to ask specific questions about the user's experience \parencite{nielsen94}.}
+\marginpar{\cognitiveWalkthroughDef}
 
 The Cognitive Style Heuristics are meant to be used in a \textbf{heuristic evaluation}\index{heuristic evaluation}, a process where software designers or evaluators go through heuristics one-by-one like a checklist, deciding whether the design does or does not reflect the heuristic. The evaluation is done independently by two or more people, who then compare findings.
 
