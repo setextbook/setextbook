@@ -21,7 +21,7 @@ If you're developing new software, you might get to choose the high-level archit
 
 \textbf{Monolith} software is one or few pieces and \textbf{cannot easily be divided} into multiple independent components that run separately and are individually useful. What about when the client side, the server side, and the database are all separate, can that be a monolith? Yes. If the client-side part of the software will not start or is not useful without the database or server-side part of the software, that's a monolith.
 
-If you're trying to think of an example of a monolith and nothing is coming to mind, that's probably because this architecture is so common; it can arose without having to plan. Your first computer program was probably a small monolith. If you keep adding more code / files / classes / components, the software becomes a bigger monolith---unless you make a different design decision.
+If you're trying to think of an example of a monolith and nothing is coming to mind, that's probably because this architecture is so common; it can arise without having to plan. Your first computer program was probably a small monolith. If you keep adding more code / files / classes / components, the software becomes a bigger monolith---unless you make a different design decision.
 
 \section{Microservice Architecture}
 
@@ -111,7 +111,7 @@ In \textbf{microservice} software, each service can be \textbf{independently tes
 
 \subsection{How is a monolith upgraded vs. microservices?}
 
-Each \textbf{microservice} can be written in a \textbf{different language} (e.g., one in Python, another in Java, another in C++, etc.), and can run in different contexts (e.g., machines with different operating systems, libraries, versions of libraries, etc.). \textbf{In theory}, this mean they can be \textbf{independently upgraded}.
+Each \textbf{microservice} can be written in a \textbf{different language} (e.g., one in Python, another in Java, another in C++, etc.), and can run in different contexts (e.g., machines with different operating systems, libraries, versions of libraries, etc.). \textbf{In theory}, this means they can be \textbf{independently upgraded}.
 
 With a \textbf{monolith}, upgrading \textbf{may require more care}; each component must be compatible with the new context (but this is also sometimes true with microservices).
 
