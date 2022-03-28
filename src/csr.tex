@@ -13,7 +13,7 @@
 \item ``I'm going to \textbf{start over} and re-write this code from scratch.''
 \item ``Every time I look at this code, I have to \textbf{re-figure-out} what it does.''
 \item ``I \textbf{don't} think these code comments \textbf{match} what the code is doing...''
-\item ``Why is this code is \textbf{repeated} in three different places?''
+\item ``Why is this code \textbf{repeated} in three different places?''
 \item ``I want to switch out this component, but \textbf{that'll break} X, Y, and Z in this other place and I don't want to deal with that.''
 \end{itemize}
 
@@ -55,7 +55,7 @@ When we first learned to code, many of us didn't write comments: solving problem
 \item{Writing lots of comments could \textbf{indicate the code needs to be simplified}. Ideally, most of the the code you write will be self-explanatory so that comments are infrequently needed.}
 \end{itemize}
 
-\subsection{Code Smells about Comments}\marginpar{As a challenge to myself, I kept the code example boxes narrow and tried to make the ``good'' code fit.}
+\subsection{Code Smells about Comments}
 
 Below is a concise \textbf{list of common code smells}\index{code smells} about comments and what to do about them (how to refactor).\\
 
@@ -67,7 +67,7 @@ Remove or update.
 }
 \item {
 \textbf{Commented-Out Code} (somebody thought they'd need that code later, but the commented out block is now getting out of date and in the way).\\
-Remove. If you're feeling risk-averse, save a backup or use a version-control system.\marginpar{Commenting out code often comes with poor assumptions (e.g., you'll need the code later, others will understand why you commented it out, the surrounding code will continue having the same purpose, etc.)}
+Remove. If you're feeling risk-averse, save a backup or use a version-control system.\marginpar{As a challenge to myself, I kept the code example boxes narrow and tried to make the ``good'' code fit.\margindivider}\marginpar{Commenting out code often comes with poor assumptions (e.g., you'll need the code later, others will understand why you commented it out, the surrounding code will continue having the same purpose, etc.)}
 \lstinputlisting[language=Python]{code/csr-comments-deadcode.py}\spacer
 }
 \item {
@@ -112,9 +112,9 @@ Break into multiple functions.
 \begin{itemize}
 \item{\textbf{Duplicate Code} (same code in multiple places)\\Consolidate into one place, but watch out for creating unwanted dependencies.
 \lstinputlisting[language=Python]{code/csr-code-duplicate.py}\spacer}
-\item{\marginpar{Thresholds like ``100 characters'' or ``5 lines'' are somewhat arbitrary. Generally, shorter is better, but not even that rule can be applied everywhere. For example, \textit{syntactic sugar} is the term for concise and elegant code syntax, usually built into the programming language. It can make your code shorter, but what's the point if nobody can understand it!}\textbf{Long Lines} (more than 100 characters or so)\\Shorten by breaking into multiple lines, converting to a function call, defining new variables, etc.
+\item{\marginpar{Thresholds like ``100 characters'' or ``5 lines'' are somewhat arbitrary. Generally, shorter is better, but not even that rule can be applied everywhere. For example, \textit{syntactic sugar} is the term for concise and elegant code syntax, usually built into the programming language. It can make your code shorter, but what's the point if nobody can understand it!\margindivider}\marginpar{When adding to another person's code, it's best to follow their coding style conventions even if you prefer a different way. However, if their code style is sloppy and inconsistent, consider whether there's a polite way to fix the problem.}\textbf{Long Lines} (more than 100 characters or so)\\Shorten by breaking into multiple lines, converting to a function call, defining new variables, etc.
 \lstinputlisting[language=Python]{code/csr-code-longline.py}\spacer}
-\item{\textbf{Inconsistent Conventions} (formatting code differently in different places, or untidily)\\Follow whatever style conventions the code is already using. If it's a new project, plan to be self-consistent or follow accepted conventions for the language you're using.\marginpar{When adding to another person's code, it's best to follow their coding style conventions even if you prefer a different way. However, if their code style is sloppy and inconsistent, consider whether there's a polite way to fix the problem.}
+\item{\textbf{Inconsistent Conventions} (formatting code differently in different places, or untidily)\\Follow whatever style conventions the code is already using. If it's a new project, plan to be self-consistent or follow accepted conventions for the language you're using.
 \lstinputlisting[language=Python]{code/csr-code-consistent.py}\spacer}
 \item{\textbf{Vague Naming} (does not communicate what the function, variable, etc. is for)\\Rename it, even if the name is long. Long names can sometimes replace comments.\marginpar{Wouldn't it be nice if code read like a book?}
 \lstinputlisting[language=Python]{code/csr-code-descriptive.py}\spacer
