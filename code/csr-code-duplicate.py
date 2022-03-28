@@ -4,7 +4,7 @@ def updateLevelOfAlarm(npc):
         setLevelOfAlarm(0)
     else
         setLevelOfAlarm(500)
-        react()
+        react(npc)
         
 def react(npc):
     if (npc.isWalking() && npc.isAlive() && npc.isFriendly())

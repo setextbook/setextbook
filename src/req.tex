@@ -28,7 +28,7 @@ The design\index{design} and implementation\index{implementation} of software sh
 \item When multiple developers are working on the same code, requirements can \textbf{help them stay in sync} with one another and \textbf{have the same goal}. Without requirements, time, effort, and money can be wasted implementing conflicting code.\marginpar{Requirements can help protect projects from drift and failure.}
 \item When requirements\index{requirements} aren't specified, it's easier for project stakeholders\index{stakeholders} (e.g., \textbf{clients}, partners, investors, consultants, management, etc.) to \textbf{influence the project toward satisfying their own} (possibly fleeting) \textbf{wants or needs}. This can result in the project drifting away from what it was originally intended to do---and can lead to project failure.
 \item Requirements are \textbf{helpful for communicating} about software with stakeholders\index{stakeholders}, \textbf{keeping track} of everything that needs to get done, and helping you and the client \textbf{decide what really needs to get done} (clients sometimes don't know what they really need).
-\end{itemize}\marginpar{\clientDef\margindivider}
+\end{itemize}\marginpar{\clientDef}
 
 \section{What Makes a Good Requirement}
 
@@ -66,10 +66,11 @@ The process of gathering requirements is called \textbf{requirements elicitation
 \end{itemize}
 
 \spacer
+\pagebreak
 \noindent\textbf{Aspects of these stakeholders\index{stakeholders} that can affect the requirements elicitation processes and the software's development and ultimate success:}\\
 
 \begin{itemize}
-\item{\marginpar{\tripleConstraintDef\margindivider}\marginpar{\focusGroupDef\margindivider}\marginpar{\usabilityTestingDef\margindivider}\marginpar{\mvpDef\margindivider}\marginpar{\softwareProcessModelDef}\textbf{Clients might not have experience or expertise}. Developers can help fill the gap between what the client wants and what is technically feasible and reasonable (e.g., given time\index{project time}, cost\index{project cost}, and scope\index{scope}, a.k.a. the \textbf{triple constraint}\index{triple constraint}).}\\
+\item{\marginpar{\tripleConstraintDef\margindivider}\marginpar{\focusGroupDef\margindivider}\marginpar{\usabilityTestingDef\margindivider}\marginpar{\mvpDef}\textbf{Clients might not have experience or expertise}. Developers can help fill the gap between what the client wants and what is technically feasible and reasonable (e.g., given time\index{project time}, cost\index{project cost}, and scope\index{scope}, a.k.a. the \textbf{triple constraint}\index{triple constraint}).}\\
 \item{\textbf{Clients\index{clients} might not have good ideas}. They may be incorrect about what users will want or will use. Developers sometimes try to guide clients toward better ideas, but developers can also have bad ideas. Methods such as \textbf{focus groups}, \textbf{usability testing}, and releasing a \textbf{minimum viable product} (MVP)\index{minimum viable product (MVP)} can help with figuring out whether users will use (and pay for) the software.}\\
 \item{\textbf{Clients might not know what they want}. They might have a rough idea, or they might have an idea that's at odds with their goals. Developers, through requirements elicitation\index{requirements elicitation}, can help clients define their goals clearly and reasonable ways for accomplishing those goals.}\\
 \item{\textbf{Users\index{users} might not know what they want or will use}. They may be unaware of their own needs or wants until there's a product in front of them that addresses those needs or wants. Even if 10,000 users tell you, ``I would definitely use an app that does X'', they might be wrong, they might only use the app once, or they might not be willing to pay for the app. MVP can be a good method for figuring out early whether users will be interested enough in the software to use or pay for it.}\\
@@ -252,14 +253,15 @@ Sometimes included in use cases\index{use case}:\\
 
 \section{Requirements Specification}
 
-\marginpar{\requirementsSpecificationDef}The process of writing down requirements is called \textbf{requirements specification}. Used as a noun, requirements specification refers to the document that contains the requirements. That document is also called an \textbf{SRS} (Software Requirements Specification)\index{software requirements specification (SRS)}. The best way to understand what an SRS looks like is to look at some.
+\marginpar{\requirementsSpecificationDef\margindivider}\marginpar{\srsDef\margindivider}\marginpar{Another type of software document, which sometimes gets confused with an SRS, is a Software Design Document (SDD)\index{software design document (SDD)}. If the SRS is what the software \textit{should} do, the SDD is what the software \textit{is}. However, there is often overlap between the two.}
+The process of writing down requirements is called \textbf{requirements specification}. Used as a noun, requirements specification refers to the document that contains the requirements. That document is also called an \textbf{SRS} (Software Requirements Specification)\index{software requirements specification (SRS)}. The best way to understand what an SRS looks like is to look at some.
 
 \spacer
 \noindent\textbf{Freely available SRS\index{software requirements specification (SRS)} examples (including some for open source software):}
 \spacer
 
 \begin{itemize}
-    \item \marginpar{\srsDef\margindivider}\marginpar{Another type of software document, which sometimes gets confused with an SRS, is a Software Design Document (SDD)\index{software design document (SDD)}. If the SRS is what the software \textit{should} do, the SDD is what the software \textit{is}. However, there is often overlap between the two.}\textbf{SRS for apps and a data repository for distributing manufacturing data}: \fullcite{hedberg17}\\
+    \item \textbf{SRS for apps and a data repository for distributing manufacturing data}: \fullcite{hedberg17}\\
     \item \textbf{SRS for data system that assesses conservation practices}: \fullcite{datasystemteam}\\
     \item \textbf{SRS for an app that splits and merges PDFs}: \fullcite{spyridonos10}\\
     \item \textbf{SRS for software that processes EEG data}: \fullcite{iniria}\\

@@ -51,10 +51,12 @@ In a microservice architecture, \textbf{components are services}. The Lewis and 
     \item \textbf{Potentially less secure communication}: Communication over a network can be more prone to interception and alteration.
 \end{itemize}
 
-\subsection{``Organized around business capabilities''}\marginpar{\clientServerArchitectureDef\margindivider}\marginpar{\businessCapabilityDef\margindivider}\marginpar{In each of these examples, what are the business resources producing customer value? What is the value to the customer? How are the business resources acting on their environment? What other resources are the business resources using?\margindivider}\marginpar{\eventualConsistencyDef\margindivider}\marginpar{\techStackDef}
+\marginpar{\clientServerArchitectureDef}
+\subsection{``Organized around business capabilities''}
 
 You may have heard of the \textbf{client-server high-level architecture}, which usually consists of multiple instances of client-side software that communicate with server-side software, which communicates with a database. That architecture is organized around technology. Another way to put that: Someone unfamiliar with the differences between client-side software, server-side software, and a database would not get much out of seeing a diagram of this architecture. 
 
+\marginpar{\businessCapabilityDef\margindivider}\marginpar{In each of these examples, what are the business resources producing customer value? What is the value to the customer? How are the business resources acting on their environment? What other resources are the business resources using?\margindivider}\marginpar{\eventualConsistencyDef\margindivider}\marginpar{\techStackDef}
 In contrast, microservices are organized around \textbf{business capabilities}. This term has multiple definitions. Michell's integrated definition fits what we're talking about: ``the potential of a business resource (or groups of resources) to produce customer value by acting on their environment via a process using other tangible and intangible resources'' \parencite{Michell2011AFA}. 
 
 \spacer
