@@ -6,4 +6,4 @@ I plan to continue using this repo for issue tracking.
 
 # Old version
 
-You can still down the old, PDF version at [https://github.com/setextbook/setextbook/raw/main/Handbook_of_Software_Engineering_Methods.pdf](https://github.com/setextbook/setextbook/raw/main/Handbook_of_Software_Engineering_Methods.pdf)
+You can still download the old, PDF version at [https://github.com/setextbook/setextbook/raw/main/Handbook_of_Software_Engineering_Methods.pdf](https://github.com/setextbook/setextbook/raw/main/Handbook_of_Software_Engineering_Methods.pdf)
